@@ -18,7 +18,7 @@ nav {
     width: 95%;
     margin: 0 auto;
     padding: 2rem 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 4rem;
 }
 
 h1 {
@@ -165,7 +165,7 @@ display: none;
 }
 
 #hero h1 {
-    font-size: 4vw;
+    font-size: 5vw;
 }
 
 #hero #hero-desktop {
@@ -189,7 +189,7 @@ display: none;
 }
 
 @media only screen and (max-width: 768px)  {
-    #hero-desktop, .nav-items, br{
+    #hero-desktop, .nav-items, br, nav button{
         display: none;
     }
 

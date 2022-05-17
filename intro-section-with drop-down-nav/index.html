@@ -20,31 +20,35 @@
     <nav class="flex-row">
       <section class="flex-row">
 
-        <h1 class="nav-items">snap</h1>
-        <div class="nav-items">
+        <h1>snap</h1>
+        <div class="nav-items dropdown">
           <a class=" flex-row">
             Features
-            <img style="padding-left:0.5rem ;" src="./images/icon-arrow-down.svg" alt="menu-drop">
-            <img style="padding-left:0.5rem ;" src="./images/icon-arrow-up.svg" alt="menu-drop"> 
+            <img class="arrow-down" style="padding-left:0.5rem ;" src="./images/icon-arrow-down.svg" alt="menu-drop">
+            <img class="arrow-up" style="padding-left:0.5rem ;" src="./images/icon-arrow-up.svg" alt="menu-drop">
           </a>
           <div class="dropdown-content">
-            <a class="flex-row dropdown-items"><img src="./images/icon-todo.svg" style="padding-right:0.5rem ;">Todo List</a>
-            <a class="flex-row dropdown-items"><img src="./images/icon-calendar.svg" style="padding-right:0.5rem ;">Calendar</a>
-            <a class="flex-row dropdown-items"><img src="./images/icon-reminders.svg" style="padding-right:0.5rem ;">Reminders</a>
-            <a class="flex-row dropdown-items"><img src="./images/icon-planning.svg" style="padding-right:0.5rem ;">Planning</a>
+            <a class="flex-row dropdown-items"><img src="./images/icon-todo.svg" style="padding-right:1rem ;">Todo
+              List</a>
+            <a class="flex-row dropdown-items"><img src="./images/icon-calendar.svg"
+                style="padding-right:1rem ;">Calendar</a>
+            <a class="flex-row dropdown-items"><img src="./images/icon-reminders.svg"
+                style="padding-right:1rem ;">Reminders</a>
+            <a class="flex-row dropdown-items"><img src="./images/icon-planning.svg"
+                style="padding-right:1rem ;">Planning</a>
           </div>
         </div>
 
-        <div class="nav-items">
+        <div class="nav-items dropdown">
           <a class="flex-row">
             Company
-            <img style="padding-left:0.5rem ;" src="./images/icon-arrow-down.svg" alt="menu-drop">
-            <img style="padding-left:0.5rem ;" src="./images/icon-arrow-up.svg" alt="menu-drop"> 
+            <img class="arrow-down" style="padding-left:0.5rem ;" src="./images/icon-arrow-down.svg" alt="menu-drop">
+            <img class="arrow-up" style="padding-left:0.5rem ;" src="./images/icon-arrow-up.svg" alt="menu-drop">
           </a>
-          <div class="dropdown-content">
-            <a class="flex-row dropdown-items">History</a>
-            <a class="flex-row dropdown-items">Our Team</a>
-            <a class="flex-row dropdown-items">Blog</a>
+          <div class="dropdown-content ">
+            <a class="dropdown-items flex-row">History</a>
+            <a class="dropdown-items flex-row">Our Team</a>
+            <a class="dropdown-items flex-row">Blog</a>
           </div>
         </div>
 
@@ -54,12 +58,67 @@
       </section>
 
       <section class="flex-row">
-        <button id="login">Login</button>
-        <button>Register</button>
+        <button class="login nav-items">Login</button>
+        <button class="nav-items">Register</button>
+
+        <img id="menu" class="nav-items" src="./images/icon-menu.svg" alt="menu">
       </section>
     </nav>
 
+    <section id="menu-mobile">
+      <img id="menu-close" src="./images/icon-close-menu.svg" alt="menu">
+      <!--Clear float-->
+      <div style="clear: both;"></div>
+
+      <!--Mobile menu item list-->
+      <div class="flex-column space-between" id="menu-list-mobile">
+
+        <!--Feature menu item-->
+        <div class="nav-items-mobile ">
+          <a id="features-m" class=" flex-row dropdown-m">
+            Features
+            <img class="arrow-down-m" src="./images/icon-arrow-down.svg" alt="menu-drop">
+            <img class="arrow-up-m" src="./images/icon-arrow-up.svg" alt="menu-drop">
+          </a>
+          <div class="dropdown-content-mobile">
+            <a class="flex-row dropdown-items"><img src="./images/icon-todo.svg" style="padding-right:1rem ;">Todo
+              List</a>
+            <a class="flex-row dropdown-items"><img src="./images/icon-calendar.svg"
+                style="padding-right:1rem ;">Calendar</a>
+            <a class="flex-row dropdown-items"><img src="./images/icon-reminders.svg"
+                style="padding-right:1rem ;">Reminders</a>
+            <a class="flex-row dropdown-items"><img src="./images/icon-planning.svg"
+                style="padding-right:1rem ;">Planning</a>
+          </div>
+        </div>
+
+        <!--Company menu item-->
+        <div class="nav-items-mobile ">
+          <a id="company-m" class="flex-row dropdown-m">
+            Company
+            <img class="arrow-down-m" src="./images/icon-arrow-down.svg" alt="menu-drop">
+            <img class="arrow-up-m" src="./images/icon-arrow-up.svg" alt="menu-drop">
+          </a>
+          <div class="dropdown-content-mobile flex-column">
+            <a class="dropdown-items flex-row">History</a>
+            <a class="dropdown-items flex-row">Our Team</a>
+            <a class="dropdown-items flex-row">Blog</a>
+          </div>
+        </div>
+
+        <a class="nav-items-mobile">Careers</a>
+        <a class="nav-items-mobile">About</a>
+
+        <!--Login & Register buttons-->
+        <button class="login nav-items-mobile">Login</button>
+        <button class="nav-items-mobile">Register</button>
+
+      </div>
+    </section>
+
     <section id="hero">
+      <img id="hero-mobile" src="./images/image-hero-mobile.png" alt="hero-mobile">
+
       <div class="flex-column space-around">
         <div class="flex-column space-between">
 
@@ -81,9 +140,11 @@
 
       </div>
 
-      <img src="./images/image-hero-desktop.png" alt="hero-desktop">
+      <img id="hero-desktop" src="./images/image-hero-desktop.png" alt="hero-desktop">
     </section>
   </main>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>

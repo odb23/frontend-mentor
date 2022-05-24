@@ -1,20 +1,47 @@
 nav{
     width: 90%;
     margin: 4rem auto;
-}
-
-.container{
     display: flex;
     justify-content: space-between;
 }
 
 input{
-    width: 20rem;
+    width: 200px;
     padding: 1rem;
+    border: none;
 }
 
-datalist{
-    width: 20rem;
+#dropdown{
+    background: white;
+    position: relative;
+}
+
+.dropdown-btn{
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    text-align: left;
+    background-color: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: 2px;
+    position: absolute;
+    box-shadow: 0px  1px  lightgray;
+    background-color: inherit;
+    width: 100%;
+}
+.show{
+    display: block;
+}
+
+.dropdown-content a{
+    text-decoration: none;
     color: inherit;
+    padding: 1rem;
+    display: block;
+    width: 100%;
 }
-
+ 

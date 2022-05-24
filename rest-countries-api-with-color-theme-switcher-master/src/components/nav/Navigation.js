@@ -1,27 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './Navigation.css'
 
-const Navigation = () => {
+const Navigation = ({ filterChoice, setfilterChoice }) => {
+  const [showDropdownMenu, setshowDropdownMenu] = useState(false)
+
+  const handleDropdownContentClick = (region) => {
+    setfilterChoice(region)
+    setshowDropdownMenu(!showDropdownMenu)
+  }
+
+  const handleSearchSubmit = () => {
+
+  }
+
   return (
     <nav >
-      <div className='container'>
-        <input type={"search"} placeholder="Search for a country..." />
+      {/* country search input */}
+      <input type={"search"} placeholder="Search for a country..." onSubmit={handleSearchSubmit}/>
 
-       <div id='dropdown'>
-         <div id='dropdown-menu'>
-           Filter by region
-         </div>
-         <div className='dropdown-content'>
-           <p>Africa</p>
-         </div>
-       </div>
+      {/* filter by region dropdown */}
+      <div id='dropdown'>
+
+        <button className='dropdown-btn' onClick={() => setshowDropdownMenu(!showDropdownMenu)}>
+          {
+            filterChoice === "" ? "Filter by region" : filterChoice
+          }
+        </button>
+      
+        {/* dropdown contents */}
+        <div className={
+          `dropdown-content ${showDropdownMenu ? 'show' : ''}`
+        }>
+          <a href='/#' onClick={() => handleDropdownContentClick("Africa")}>Africa</a>
+          <a href='/#' onClick={() => handleDropdownContentClick("America")}>America</a>
+        </div>
       </div>
     </nav>
   )
 }
 
 export default Navigation
-
-// Use a variable to store current filter key and the variable is null filter button should update innerText
-// use passing state up technique for this particukar state management 
